@@ -8,20 +8,33 @@ public class Main {
 
         System.out.println("Задача 2");
         for (int i = 0; i < firstArray.length; i++) {
-            System.out.print(firstArray[i] + " ");
+            if (i < firstArray.length && i != firstArray.length - 1) {
+                System.out.print(firstArray[i] + ", ");
+            } else if (i == firstArray.length - 1) {
+                System.out.print(firstArray[i]);
+            }
+
         }
         System.out.print("\n");
         for (int i = 0; i < secondArray.length; i++) {
-            System.out.print(secondArray[i] + " ");
+            if (i < secondArray.length && i != firstArray.length - 1) {
+                System.out.print(secondArray[i] + ", ");
+            } else if (i == firstArray.length - 1) {
+                System.out.print(secondArray[i]);
+            }
         }
         System.out.print("\n");
         for (int i = 0; i < example.length; i++) {
-            System.out.print(example[i] + " ");
+            if (i < example.length && i != example.length - 1) {
+                System.out.print(example[i] + ", ");
+            } else if (i == example.length - 1) {
+                System.out.print(example[i]);
+            }
         }
         System.out.print("\n");
 
         System.out.println("Задача 3");
-        for (int i = firstArray.length - 1; i <= firstArray.length && i >= 0; i--) {
+        for (int i = firstArray.length - 1; i >= 0; i--) {
             if (i < firstArray.length && i != 0) {
                 System.out.print(firstArray[i] + ",");
             } else if (i == 0) {
@@ -45,13 +58,14 @@ public class Main {
                 System.out.print(example[i]);
             }
         }
+
         System.out.print("\n");
         System.out.println("Задача 4");
         for (int i = 0; i < firstArray.length; i++) {
             if (firstArray[i] % 2 != 0) {
                 firstArray[i] = firstArray[i] + 1;
-                System.out.print(firstArray[i] + " ");
-            } else System.out.print(firstArray[i] + " ");
+            }
+            System.out.print(firstArray[i] + " ");
         }
     }
 }
